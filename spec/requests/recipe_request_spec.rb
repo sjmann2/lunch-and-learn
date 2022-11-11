@@ -44,6 +44,9 @@ RSpec.describe 'The recipe request spec' do
 
   describe "Given no country search term" do
     it 'returns recipes for a random country', :vcr do
+      json_country_response = File.read('spec/fixtures/random_country.json')
+      stub_request(:get, "https://restcountries.com/v2/all").to_return(status: 200, body: json_country_response)
+
       get "/api/v1/recipes"
 
       expect(response).to be_successful
@@ -65,7 +68,6 @@ RSpec.describe 'The recipe request spec' do
       expect(recipe[:attributes][:country]).to be_a(String)
       expect(recipe[:attributes][:image]).to be_a(String)
       expect(recipe[:attributes]).to_not have_key(:ingredients)
-
     end
   end
 end
