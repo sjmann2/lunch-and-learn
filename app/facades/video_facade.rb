@@ -1,8 +1,10 @@
 class VideoFacade
-  def self.get_videos(country)
+  def self.get_video(country)
     response = VideoService.get_videos(country)
-    response[:items].map do |data|
+    videos = response[:items].map do |video|
+      data = video.merge(country: country)
       Video.new(data)
     end
+    videos.first
   end
 end
