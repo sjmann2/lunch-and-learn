@@ -6,9 +6,9 @@ class RecipeService
     end
   end
 
-  def self.get_recipes(keyword)
+  def self.get_recipes(country)
     response = conn.get('/search') do |req|
-      req.params['q'] = keyword
+      req.params['q'] = country
       req.params['count'] = 10
     end
     JSON.parse(response.body, symbolize_names: true)
