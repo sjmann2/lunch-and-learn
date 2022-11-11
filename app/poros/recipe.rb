@@ -8,7 +8,7 @@ class Recipe
   def initialize(data)
     @id = nil.to_json
     @title = data[:recipe][:label]
-    @url = data[:recipe][:uri]
+    @url = data[:recipe][:url]
     @image = data[:recipe][:image]
     @country = data[:q]
   end

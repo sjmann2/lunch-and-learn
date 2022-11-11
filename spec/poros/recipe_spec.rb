@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Recipe do
   before :each do
-    @recipe = Recipe.new({recipe: {id: "null", label: "Andy Ricker's Naam Cheuam Naam Taan Piip (Palm Sugar Simple Syrup)", uri: "https://www.seriouseats.com/recipes/2013/11/andy-rickers-naam-cheuam-naam-taan-piip-palm-sugar-simple-syrup.html", image: "https://edamam-product-images.s3.amazonaws.com"}, q: "thailand"})
+    @recipe = Recipe.new({recipe: {id: "null", label: "Andy Ricker's Naam Cheuam Naam Taan Piip (Palm Sugar Simple Syrup)", url: "https://www.seriouseats.com/recipes/2013/11/andy-rickers-naam-cheuam-naam-taan-piip-palm-sugar-simple-syrup.html", image: "https://edamam-product-images.s3.amazonaws.com"}, q: "thailand"})
   end
 
   it 'exists' do
