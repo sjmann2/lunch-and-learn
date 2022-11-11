@@ -1,14 +1,14 @@
 class RecipeSerializer
-  def self.format_recipes(country)
+  def self.format_recipes(recipes)
     {
-      data: RecipeFacade.get_recipes(country)[1].map do |recipe|
+      data: recipes.map do |recipe|
         {
           id: recipe.id,
           type: "recipe",
           attributes: {
             title: recipe.title,
             url: recipe.url,
-            country: RecipeFacade.get_recipes(country)[0],
+            country: recipe.country,
             image: recipe.image
           }
         }
