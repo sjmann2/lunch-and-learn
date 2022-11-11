@@ -25,6 +25,7 @@ RSpec.describe 'The recipe request spec' do
         expect(recipe[:attributes][:country]).to be_a(String)
         expect(recipe[:attributes][:image]).to be_a(String)
         expect(recipe[:attributes]).to_not have_key(:ingredients)
+        expect(recipe[:attributes]).to_not have_key(:calories)
       end
     end
   end
@@ -68,6 +69,7 @@ RSpec.describe 'The recipe request spec' do
       expect(recipe[:attributes][:country]).to be_a(String)
       expect(recipe[:attributes][:image]).to be_a(String)
       expect(recipe[:attributes]).to_not have_key(:ingredients)
+      expect(recipe[:attributes]).to_not have_key(:calories)
     end
   end
 end
