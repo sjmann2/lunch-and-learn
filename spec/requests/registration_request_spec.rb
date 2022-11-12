@@ -21,19 +21,24 @@ RSpec.describe 'The user registration request' do
         expect(result[:data][:attributes][:name]).to be_a(String)
         expect(result[:data][:attributes][:email]).to be_a(String)
         expect(result[:data][:attributes][:api_key]).to be_a(String)
+      end
+    end
 
-        # {
-        #   "data": {
-        #     "type": "user",
-        #     "id": "1",
-        #     "attributes": {
-        #       "name": "Athena Dao",
-        #       "email": "athenadao@bestgirlever.com",
-        #       "api_key": "jgn983hy48thw9begh98h4539h4"
-        #     }
-        #   }
-        # }
+    describe 'when params are missing' do
+      it 'returns a status 400 and an error message' do
+        headers = {"CONTENT_TYPE" => "application/json"}
+        body = JSON.generate(name: "Athena Dao")
+        
+        post '/api/v1/users', headers: headers, params: body
 
+        expect(response).to have_http_status(400)
+
+        result = JSON.parse(response.body, symbolize_names: true)
+
+        expect(result).to be_a(Hash)
+        expect(result[:errors].first).to have_key(:status)
+        expect(result[:errors].first).to have_key(:message)
+        expect(result[:errors].first).to have_key(:code)
       end
     end
   end
