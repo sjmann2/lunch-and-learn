@@ -1,8 +1,6 @@
 require 'rails_helper'
-require './lib/api_key'
 
 RSpec.describe User, type: :model do
-  include ApiKey 
   describe 'relationships' do
     # it { should have_many :favorites }
   end
