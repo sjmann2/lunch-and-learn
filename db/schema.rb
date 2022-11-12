@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2022_11_12_223640) do
   enable_extension "plpgsql"
 
   create_table "favorites", force: :cascade do |t|
-    t.string "api_key"
     t.string "country"
     t.string "recipe_link"
     t.string "recipe_title"

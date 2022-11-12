@@ -40,7 +40,7 @@ RSpec.describe 'The favorite request' do
 
         expect(response).to have_http_status(404)
         result = JSON.parse(response.body, symbolize_names: true)
-        expect(result[:errors].first[:message]).to eq("No user found with api_key knm483hy48thw9begh98h4539h7")
+        expect(result[:errors].first[:message]).to eq("Could not find user with api_key knm483hy48thw9begh98h4539h7")
       end
     end
   end

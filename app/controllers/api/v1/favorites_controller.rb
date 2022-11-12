@@ -2,7 +2,7 @@ class Api::V1::FavoritesController < ApplicationController
   def create
     user = User.find_by(api_key: params[:api_key])
     if user.nil?
-      render_error("No user found with api_key #{params[:api_key]}", 'NOT FOUND', 404)
+      render_error("Could not find user with api_key #{params[:api_key]}", 'NOT FOUND', 404)
       return
     end
     favorite = user.favorites.new(favorite_params)
@@ -21,6 +21,6 @@ class Api::V1::FavoritesController < ApplicationController
   end
 
   def favorite_params
-    params.permit(:api_key, :country, :recipe_link, :recipe_title)
+    params.permit(:country, :recipe_link, :recipe_title)
   end
 end
