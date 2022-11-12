@@ -1,4 +1,5 @@
 class LearningResoucesSerializer
+
   def self.format_resources(video, photos)
     {
       data: {
@@ -16,6 +17,20 @@ class LearningResoucesSerializer
               url: photo.url
             }
           end
+        }
+      }
+    }
+  end
+
+  def self.format_empty_resources(country)
+    {
+      data: {
+        id: nil,
+        type: "learning_resource",
+        attributes: {
+          country: country,
+          video: [],
+          images: []
         }
       }
     }

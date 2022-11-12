@@ -27,7 +27,7 @@ RSpec.describe 'The learning resources request' do
   end
 
   describe 'if no images or videos are found for the country', :vcr do
-    xit 'returns empty arrays' do
+    it 'returns empty arrays' do
       get '/api/v1/learning_resources?country=fjkdsloafjdilfjdskl'
 
       expect(response).to be_successful
