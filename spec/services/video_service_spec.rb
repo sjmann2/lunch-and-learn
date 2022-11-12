@@ -12,4 +12,10 @@ RSpec.describe VideoService do
     expect(video[:snippet]).to have_key(:title)
     expect(video[:snippet][:title]).to be_a(String)
   end
+
+  it 'returns an HTTP response of empty items if keyword does not match any videos', :vcr do
+    response = VideoService.get_videos('fjkdljkfldskjdsf')
+
+    expect(response[:items]).to be_empty
+  end
 end
