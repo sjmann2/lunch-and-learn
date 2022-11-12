@@ -2,7 +2,7 @@ class LearningResoucesSerializer
   def self.format_resources(video, photos)
     {
       data: {
-        id: "null",
+        id: nil,
         type: "learning_resource",
         attributes: {
           country: video.country,
