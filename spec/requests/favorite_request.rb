@@ -3,14 +3,15 @@ require 'rails_helper'
 RSpec.describe 'The favorite request' do
   describe 'POST /api/v1/favorites' do
     describe 'When api key is valid' do
-      user = User.create!(name: "Tina", email: "tinagirl@yahoo.com", api_key: 'jgn983hy48thw9begh98h4539h4')
+      it 'creates a favorite recipe for the given user' do
+        user = User.create!(name: "Tina", email: "linagirl@yahoo.com", api_key: 'jgn983hy48thw9begh98h4539h4')
 
-      headers = {'CONTENT_TYPE' => 'application/json'}
-      body = JSON.generate(
-        api_key: "jgn983hy48thw9begh98h4539h4",
-        country: "thailand",
-        recipe_link: "https://www.tastingtable.com/.....", 
-        recipe_title: "Crab Fried Rice (Khaao Pad Bpu)")
+        headers = {'CONTENT_TYPE' => 'application/json'}
+        body = JSON.generate(
+          api_key: "jgn983hy48thw9begh98h4539h4",
+          country: "thailand",
+          recipe_link: "https://www.tastingtable.com/.....", 
+          recipe_title: "Crab Fried Rice (Khaao Pad Bpu)")
 
         post '/api/v1/favorites', headers: headers, params: body
 
@@ -21,6 +22,7 @@ RSpec.describe 'The favorite request' do
 
         expect(result).to have_key(:success)
         expect(result[:success]).to eq("Favorite added successfully")
+      end
     end
   end
 end
