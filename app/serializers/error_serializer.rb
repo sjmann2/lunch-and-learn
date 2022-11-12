@@ -1,10 +1,10 @@
 class ErrorSerializer
-  attr_reader :error,
+  attr_reader :message,
               :status,
               :code
 
-  def initialize(error, status, code)
-    @error = error
+  def initialize(message, status, code)
+    @message = message
     @status = status
     @code = code
   end
@@ -14,7 +14,7 @@ class ErrorSerializer
       errors: [
         {
           status: @status,
-          message: @error,
+          message: @message,
           code: @code
         }
       ]

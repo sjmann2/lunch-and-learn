@@ -45,18 +45,3 @@ RSpec.describe 'The favorite request' do
     end
   end
 end
-# 
-# Content-Type: application/json
-# Accept: application/json
-
-# {
-#     "api_key": "jgn983hy48thw9begh98h4539h4",
-#     "country": "thailand",
-#     "recipe_link": "https://www.tastingtable.com/.....",
-#     "recipe_title": "Crab Fried Rice (Khaao Pad Bpu)"
-# }
-# Response:
-
-# {
-#     "success": "Favorite added successfully"
-# }
