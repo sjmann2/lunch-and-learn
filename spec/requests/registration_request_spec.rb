@@ -41,5 +41,22 @@ RSpec.describe 'The user registration request' do
         expect(result[:errors].first).to have_key(:code)
       end
     end
+
+    describe 'if an email address is not unique' do
+      it 'returns an error message' do
+        headers = {"CONTENT_TYPE" => "application/json"}
+        body = JSON.generate(name: "Jim Beans", email: "jim@beans.com")
+        post '/api/v1/users', headers: headers, params: body
+        expect(response).to have_http_status(201)
+
+        body = JSON.generate(name: "Jimmy Beans", email: "jim@beans.com")
+        post '/api/v1/users', headers: headers, params: body
+
+        expect(response).to have_http_status(400)
+        result = JSON.parse(response.body, symbolize_names: true)
+
+        expect(result[:errors].first[:message]).to eq(["Email has already been taken"])
+      end
+    end
   end
 end
