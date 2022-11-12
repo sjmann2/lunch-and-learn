@@ -1,0 +1,230 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=<youtube_api_key>&part=snippet&q=thailand%20history&type=video
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Fri, 11 Nov 2022 22:00:02 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "AdMSK99GQieN-Z1ID8rlICGTyuY",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "3_F-JmVttIfRnS7Kellqx60vWig",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "zo1e7XUWkME"
+              },
+              "snippet": {
+                "publishedAt": "2020-12-14T13:58:07Z",
+                "channelId": "UCuCuEKq1xuRA0dFQj1qg9-Q",
+                "title": "THE HISTORY OF THAILAND in 10 minutes",
+                "description": "THE HISTORY OF THAILAND in 10 minutes ♢Consider to Support the Channel of Patreon and gain cool stuff: ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/zo1e7XUWkME/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/zo1e7XUWkME/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/zo1e7XUWkME/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Knowledgia",
+                "liveBroadcastContent": "none",
+                "publishTime": "2020-12-14T13:58:07Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "CB893Wxu6bTV9DB3OyPc7Ld23D4",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "OfOMEP_7AJM"
+              },
+              "snippet": {
+                "publishedAt": "2018-07-25T00:28:30Z",
+                "channelId": "UCp9ZtilfKJds0iWytR_pnOQ",
+                "title": "The History of Thailand Explained in 5 minutes",
+                "description": "The history of Thailand explained in 5 minutes Support these videos on Patreon! :D https://www.patreon.com/Epimetheus1776 ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/OfOMEP_7AJM/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/OfOMEP_7AJM/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/OfOMEP_7AJM/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Epimetheus",
+                "liveBroadcastContent": "none",
+                "publishTime": "2018-07-25T00:28:30Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "0H5QTat8n_cU2UCgN7A4NYlxPeQ",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "RLEl875HH8w"
+              },
+              "snippet": {
+                "publishedAt": "2020-05-30T12:00:08Z",
+                "channelId": "UC_Lnb8ZHqqgLbp-7hltuT9w",
+                "title": "Thailand&#39;s Ancient Modern Kingdom | The Mark Of Empire | Ayutthaya",
+                "description": "The city of Ayutthaya was the capital of a mighty empire that once controlled large parts of Myanmar, Laos, Cambodia, and ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/RLEl875HH8w/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/RLEl875HH8w/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/RLEl875HH8w/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "CNA Insider",
+                "liveBroadcastContent": "none",
+                "publishTime": "2020-05-30T12:00:08Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "hsHlX1-GlEUoUOGMuRSbLDW2RKU",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "PNwqSR5clWw"
+              },
+              "snippet": {
+                "publishedAt": "2021-10-05T08:46:18Z",
+                "channelId": "UCMNMpSc81hvn5OC26yj-5Jw",
+                "title": "History of Thailand: The Country That Was Never Colonized",
+                "description": "Join the Captivating History Book Club: https://bit.ly/3Dkh91w Get a FREE mythology bundle ebook covering Greek, Norse, and ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/PNwqSR5clWw/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/PNwqSR5clWw/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/PNwqSR5clWw/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Captivating History",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-10-05T08:46:18Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "R5_On136Dcnrf8bBDvF0pqZVP2g",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "8i9Rg1rmyb8"
+              },
+              "snippet": {
+                "publishedAt": "2021-06-13T14:39:33Z",
+                "channelId": "UCuCuEKq1xuRA0dFQj1qg9-Q",
+                "title": "Why wasn&#39;t Thailand Colonized?",
+                "description": "Why wasn't Thailand Colonized? As the powers of Europe began to grow and expand throughout the world's history, colonialism ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/8i9Rg1rmyb8/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/8i9Rg1rmyb8/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/8i9Rg1rmyb8/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Knowledgia",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-06-13T14:39:33Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Fri, 11 Nov 2022 22:00:02 GMT
+recorded_with: VCR 6.1.0

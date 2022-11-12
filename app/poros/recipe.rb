@@ -6,7 +6,6 @@ class Recipe
               :country
 
   def initialize(data)
-    @id = nil.to_json
     @title = data[:recipe][:label]
     @url = data[:recipe][:url]
     @image = data[:recipe][:image]
