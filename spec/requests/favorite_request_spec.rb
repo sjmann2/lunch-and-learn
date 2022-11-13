@@ -106,35 +106,3 @@ RSpec.describe 'The favorite request' do
     end
   end
 end
-# 
-# Content-Type: application/json
-# Accept: application/json
-
-# {
-#     "api_key": "jgn983hy48thw9begh98h4539h4"
-# }
-
-# {
-#   "data": [
-#       {
-#           "id": "1",
-#           "type": "favorite",
-#           "attributes": {
-#               "recipe_title": "Recipe: Egyptian Tomato Soup",
-#               "recipe_link": "http://www.thekitchn.com/recipe-egyptian-tomato-soup-weeknight....",
-#               "country": "egypt",
-#               "created_at": "2022-11-02T02:17:54.111Z"
-#           }
-#       },
-#       {
-#           "id": "2",
-#           "type": "favorite",
-#           "attributes": {
-#               "recipe_title": "Crab Fried Rice (Khaao Pad Bpu)",
-#               "recipe_link": "https://www.tastingtable.com/.....",
-#               "country": "thailand",
-#               "created_at": "2022-11-07T03:44:08.917Z"
-#           }
-#       }
-#   ]
-# }    
