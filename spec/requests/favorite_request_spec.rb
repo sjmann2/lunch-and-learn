@@ -70,7 +70,38 @@ RSpec.describe 'The favorite request' do
         expect(results[:data][0][:attributes][:recipe_link]).to be_a(String)
         expect(results[:data][0][:attributes][:country]).to be_a(String)
         expect(results[:data][0][:attributes][:created_at]).to be_a(String)
+      end
 
+      describe 'when the user has not favorited any recipes' do
+        it 'returns a data object with an empty array' do
+          user = User.create!(name: "Tina", email: "linagirl@yahoo.com", api_key: 'jgn983hy48thw9begh98h4539h4')
+
+          headers = {'CONTENT_TYPE' => 'application/json'}
+          body = JSON.generate(
+            api_key: "jgn983hy48thw9begh98h4539h4")
+  
+          get '/api/v1/favorites', headers: headers, params: JSON.parse(body)
+
+          expect(response).to be_successful
+          expect(response).to have_http_status(200)
+
+          results = JSON.parse(response.body, symbolize_names: true)
+          expect(results[:data]).to be_empty
+        end
+      end
+    end
+
+    describe 'When the api key does not match any user' do
+      it 'returns a status 404 and error message' do
+        headers = {'CONTENT_TYPE' => 'application/json'}
+        body = JSON.generate(
+          api_key: "jgn983hy48thw9begh98h4539h4")
+
+        get '/api/v1/favorites', headers: headers, params: JSON.parse(body)
+
+        expect(response).to have_http_status(404)
+        result = JSON.parse(response.body, symbolize_names: true)
+        expect(result[:errors].first[:message]).to eq("Could not find user with api_key jgn983hy48thw9begh98h4539h4")
       end
     end
   end

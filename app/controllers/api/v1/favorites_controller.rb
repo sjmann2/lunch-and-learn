@@ -1,16 +1,14 @@
 class Api::V1::FavoritesController < ApplicationController
   def index
     user = User.find_by(api_key: params[:api_key])
+    return render_error("Could not find user with api_key #{params[:api_key]}", 'NOT FOUND', 404) if user.nil?
     favorites = user.favorites
     render json: FavoriteSerializer.new(favorites)
   end
 
   def create
     user = User.find_by(api_key: params[:api_key])
-    if user.nil?
-      render_error("Could not find user with api_key #{params[:api_key]}", 'NOT FOUND', 404)
-      return
-    end
+    return render_error("Could not find user with api_key #{params[:api_key]}", 'NOT FOUND', 404) if user.nil?
     favorite = user.favorites.new(favorite_params)
     if favorite.save
       render json: FavoriteSerializer.post_favorite, status: 201
