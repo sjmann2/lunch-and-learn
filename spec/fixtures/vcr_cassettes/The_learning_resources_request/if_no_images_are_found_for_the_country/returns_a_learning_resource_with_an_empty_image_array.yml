@@ -1,0 +1,230 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=<youtube_api_key>&part=snippet&q=uruguay%20history&type=video
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 13 Nov 2022 22:24:04 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "Elr4NWfEQelxCPHXZjFHWHfQh1o",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "3aA4Ia-IlgzTOcgVBYdIXMs-edE",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "9AQPap0qTG0"
+              },
+              "snippet": {
+                "publishedAt": "2021-03-18T15:17:14Z",
+                "channelId": "UCo1g4EQqLwMO9RqEv1rCUpQ",
+                "title": "Brief Political History of Uruguay",
+                "description": "This video explores the basics of Uruguayan history and politics to explain how it is that Uruguay overcame a history of civil war ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/9AQPap0qTG0/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/9AQPap0qTG0/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/9AQPap0qTG0/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Crónica Panamericana",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-03-18T15:17:14Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "1s_I2jnTis9rW9HG1E6cGq0TxOk",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "AzsCn_wKfbI"
+              },
+              "snippet": {
+                "publishedAt": "2020-04-25T18:00:04Z",
+                "channelId": "UCtGG8ucQgEJPeUPhJZ4M4jA",
+                "title": "How Does Uruguay Exist?",
+                "description": "Sorry I took a week off, it was my birthday and I wasn't really feeling the birthday work. This is somewhat of an update to that old ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/AzsCn_wKfbI/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/AzsCn_wKfbI/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/AzsCn_wKfbI/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Rare Earth",
+                "liveBroadcastContent": "none",
+                "publishTime": "2020-04-25T18:00:04Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "Z7iF6hK8FrzySaduWwmOYe6qaMI",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "wpzuhdLWAPA"
+              },
+              "snippet": {
+                "publishedAt": "2020-05-11T18:02:06Z",
+                "channelId": "UCtGG8ucQgEJPeUPhJZ4M4jA",
+                "title": "The Swiss Colony of Uruguay",
+                "description": "No bang, no excitement. Just some farmers living life. I thought the Volk deserved a story, too. Your support keeps us going: ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/wpzuhdLWAPA/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/wpzuhdLWAPA/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/wpzuhdLWAPA/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Rare Earth",
+                "liveBroadcastContent": "none",
+                "publishTime": "2020-05-11T18:02:06Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "TIrE8TbDHzNgMP-BJM5E-ALZnG8",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "Cg6oXdk9KtY"
+              },
+              "snippet": {
+                "publishedAt": "2021-06-30T11:49:56Z",
+                "channelId": "UCOFcY-c4QmypQxTkg9DkfeA",
+                "title": "History of Uruguay",
+                "description": "The history of Uruguay comprises different periods: the pre-Columbian time or early history , the colonial period , the period of ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/Cg6oXdk9KtY/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/Cg6oXdk9KtY/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/Cg6oXdk9KtY/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "History Media-HD",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-06-30T11:49:56Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "IV-H1ag3w2IW1rwA18V1UmyE6NM",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "RHFE5L4xRGo"
+              },
+              "snippet": {
+                "publishedAt": "2022-07-15T20:16:14Z",
+                "channelId": "UCT3v6vL2H5HK4loLMc8pmCw",
+                "title": "URUGUAY: the COUNTRY BUCKING the SOCIALIST WAVE in LATIN AMERICA - VisualPolitik EN",
+                "description": "Sponsored by MANSCAPED. Get 20% OFF + Free shipping + 2 FREE GIFTS @manscaped with promo code “VPEN” at ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/RHFE5L4xRGo/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/RHFE5L4xRGo/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/RHFE5L4xRGo/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "VisualPolitik EN",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-07-15T20:16:14Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Sun, 13 Nov 2022 22:24:04 GMT
+recorded_with: VCR 6.1.0
