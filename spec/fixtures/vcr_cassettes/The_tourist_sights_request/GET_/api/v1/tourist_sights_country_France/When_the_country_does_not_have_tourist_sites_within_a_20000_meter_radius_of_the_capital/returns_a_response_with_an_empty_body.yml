@@ -1,0 +1,102 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://restcountries.com/v2/name/Ecuador
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 14 Nov 2022 17:39:57 GMT
+      Server:
+      - Apache/2.4.38 (Debian)
+      Cache-Control:
+      - public, immutable, max-age=31556926
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '676'
+    body:
+      encoding: UTF-8
+      string: '[{"name":"Ecuador","topLevelDomain":[".ec"],"alpha2Code":"EC","alpha3Code":"ECU","callingCodes":["593"],"capital":"Quito","altSpellings":["EC","Republic
+        of Ecuador","República del Ecuador"],"subregion":"South America","region":"Americas","population":17643060,"latlng":[-2.0,-77.5],"demonym":"Ecuadorean","area":276841.0,"gini":45.7,"timezones":["UTC-06:00","UTC-05:00"],"borders":["COL","PER"],"nativeName":"Ecuador","numericCode":"218","flags":{"svg":"https://flagcdn.com/ec.svg","png":"https://flagcdn.com/w320/ec.png"},"currencies":[{"code":"USD","name":"United
+        States dollar","symbol":"$"}],"languages":[{"iso639_1":"es","iso639_2":"spa","name":"Spanish","nativeName":"Español"}],"translations":{"br":"Ecuador","pt":"Equador","nl":"Ecuador","hr":"Ekvador","fa":"اکوادور","de":"Ecuador","es":"Ecuador","fr":"Équateur","ja":"エクアドル","it":"Ecuador","hu":"Ecuador"},"flag":"https://flagcdn.com/ec.svg","regionalBlocs":[{"acronym":"USAN","name":"Union
+        of South American Nations","otherAcronyms":["UNASUR","UNASUL","UZAN"],"otherNames":["Unión
+        de Naciones Suramericanas","União de Nações Sul-Americanas","Unie van Zuid-Amerikaanse
+        Naties","South American Union"]}],"cioc":"ECU","independent":true}]'
+  recorded_at: Mon, 14 Nov 2022 17:39:57 GMT
+- request:
+    method: get
+    uri: https://api.geoapify.com/v2/places?apiKey=<place_api_key>&categories=tourism.sights&filter=circle:-77.5,-2.0,20000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 14 Nov 2022 17:39:58 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Api-Version:
+      - '1.0'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - accept, accept-language, content-language, access-control-max-age, access-control-allow-headers,
+        access-control-allow-methods, access-control-allow-origin, allow, api-version,
+        cf-ray, content-encoding, content-type, date, expect-ct, server, status, vary,
+        cache-control, etag, last-modified, expires, host, cf-ipcountry, cdn-loop,
+        accept-encoding, x-forwarded-for, x-forwarded-proto, cf-visitor, user-agent,
+        cf-connecting-ip, x-forwarded-port
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS, PUT
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Cache-Control:
+      - private, max-age=0, no-cache
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=W2qT3Bf5K8oSLg2k4v%2FV83O0N2uri2qUkIE4OHXSfqNh5RbfD8TCyG6Y3uJ3%2Bqd02pBdeKsx8DFYLLkTOuDSUNCp%2F132S49WZ7ywbmr12p2QFMzXwkGakP9miOK%2FjAFjIOE%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 76a1878e9f562bbd-ORD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"type":"FeatureCollection","features":[]}'
+  recorded_at: Mon, 14 Nov 2022 17:39:57 GMT
+recorded_with: VCR 6.1.0
