@@ -53,10 +53,10 @@ RSpec.describe 'The favorite request' do
         favorite = user.favorites.create!(country: "egypt",  recipe_title: "Recipe: Egyptian Tomato Soup", recipe_link: "http://www.thekitchn.com/recipe-egyptian-tomato-soup-weeknight....")
         
         headers = {'CONTENT_TYPE' => 'application/json'}
-        body = JSON.generate(
-          api_key: "jgn983hy48thw9begh98h4539h4")
+        body = {
+          api_key: "jgn983hy48thw9begh98h4539h4"}
 
-        get '/api/v1/favorites', headers: headers, params: JSON.parse(body)
+        get '/api/v1/favorites', headers: headers, params: body
 
         expect(response).to be_successful
         expect(response).to have_http_status(200)
