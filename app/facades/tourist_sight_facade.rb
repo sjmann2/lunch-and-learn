@@ -1,5 +1,5 @@
 class TouristSightFacade
-  def self.get_sights(country)
+  def self.get_sights(country = (CountryFacade.get_country).name)
     country.gsub!(/\s+/, "%20")
     country = CountryService.get_country(country)
     latlng = country.first[:latlng]
