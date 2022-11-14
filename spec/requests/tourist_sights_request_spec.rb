@@ -78,7 +78,7 @@ RSpec.describe 'The tourist sights request' do
       expect(response).to have_http_status(200)
 
       sites = JSON.parse(response.body, symbolize_names: true)
-require 'pry' ; binding.pry
+
       expect(sites).to be_a(Hash)
       expect(sites[:data]).to be_an(Array)
 
@@ -94,6 +94,15 @@ require 'pry' ; binding.pry
       expect(site[:attributes][:address]).to be_a(String)
       expect(site[:attributes]).to have_key(:place_id)
       expect(site[:attributes][:place_id]).to be_a(String)
+    end
+  end
+
+  describe 'if the country is not a valid country', :vcr do
+    it 'returns a 404 status' do
+      get '/api/v1/tourist_sights?country=thaland'
+
+      expect(response).to have_http_status(404)
+
     end
   end
 end
