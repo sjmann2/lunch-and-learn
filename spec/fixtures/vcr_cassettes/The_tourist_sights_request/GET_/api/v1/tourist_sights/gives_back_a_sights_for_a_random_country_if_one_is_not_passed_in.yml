@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://restcountries.com/v2/name/Afghanistan
+    uri: https://restcountries.com/v2/name/Latvia
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Nov 2022 18:15:08 GMT
+      - Mon, 14 Nov 2022 18:18:17 GMT
       Server:
       - Apache/2.4.38 (Debian)
       Cache-Control:
@@ -27,17 +27,17 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '700'
+      - '993'
     body:
       encoding: UTF-8
-      string: '[{"name":"Afghanistan","topLevelDomain":[".af"],"alpha2Code":"AF","alpha3Code":"AFG","callingCodes":["93"],"capital":"Kabul","altSpellings":["AF","Afġānistān"],"subregion":"Southern
-        Asia","region":"Asia","population":40218234,"latlng":[33.0,65.0],"demonym":"Afghan","area":652230.0,"timezones":["UTC+04:30"],"borders":["IRN","PAK","TKM","UZB","TJK","CHN"],"nativeName":"افغانستان","numericCode":"004","flags":{"svg":"https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg","png":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/320px-Flag_of_the_Taliban.svg.png"},"currencies":[{"code":"AFN","name":"Afghan
-        afghani","symbol":"؋"}],"languages":[{"iso639_1":"ps","iso639_2":"pus","name":"Pashto","nativeName":"پښتو"},{"iso639_1":"uz","iso639_2":"uzb","name":"Uzbek","nativeName":"Oʻzbek"},{"iso639_1":"tk","iso639_2":"tuk","name":"Turkmen","nativeName":"Türkmen"}],"translations":{"br":"Afghanistan","pt":"Afeganistão","nl":"Afghanistan","hr":"Afganistan","fa":"افغانستان","de":"Afghanistan","es":"Afganistán","fr":"Afghanistan","ja":"アフガニスタン","it":"Afghanistan","hu":"Afganisztán"},"flag":"https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg","regionalBlocs":[{"acronym":"SAARC","name":"South
-        Asian Association for Regional Cooperation"}],"cioc":"AFG","independent":true}]'
-  recorded_at: Mon, 14 Nov 2022 18:15:08 GMT
+      string: '[{"name":"Latvia","topLevelDomain":[".lv"],"alpha2Code":"LV","alpha3Code":"LVA","callingCodes":["371"],"capital":"Riga","altSpellings":["LV","Republic
+        of Latvia","Latvijas Republika"],"subregion":"Northern Europe","region":"Europe","population":1901548,"latlng":[57.0,25.0],"demonym":"Latvian","area":64559.0,"gini":35.1,"timezones":["UTC+02:00"],"borders":["BLR","EST","LTU","RUS"],"nativeName":"Latvija","numericCode":"428","flags":{"svg":"https://flagcdn.com/lv.svg","png":"https://flagcdn.com/w320/lv.png"},"currencies":[{"code":"EUR","name":"Euro","symbol":"€"}],"languages":[{"iso639_1":"lv","iso639_2":"lav","name":"Latvian","nativeName":"latviešu
+        valoda"}],"translations":{"br":"Latvia","pt":"Letónia","nl":"Letland","hr":"Latvija","fa":"لتونی","de":"Lettland","es":"Letonia","fr":"Lettonie","ja":"ラトビア","it":"Lettonia","hu":"Lettország"},"flag":"https://flagcdn.com/lv.svg","regionalBlocs":[{"acronym":"EU","name":"European
+        Union"}],"cioc":"LAT","independent":true}]'
+  recorded_at: Mon, 14 Nov 2022 18:18:17 GMT
 - request:
     method: get
-    uri: https://api.geoapify.com/v2/places?apiKey=<place_api_key>&categories=tourism.sights&filter=circle:65.0,33.0,20000
+    uri: https://api.geoapify.com/v2/places?apiKey=<place_api_key>&categories=tourism.sights&filter=circle:25.0,57.0,20000
     body:
       encoding: US-ASCII
       string: ''
@@ -54,7 +54,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Nov 2022 18:15:09 GMT
+      - Mon, 14 Nov 2022 18:18:18 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -84,17 +84,153 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=yFjLZ6%2FX672Ef3JWPAuz8DZ1vqgNIzL378Sz%2BcBfyehYB%2BsfV%2FlHHs7X07%2BEEN7FlHldjestcEulIwdInRf1fa%2FeQyU8i%2BY8wlNSvD%2FXL4oAYdu3nuoqhtLOQWS%2BQF1kWuQ%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=uZ%2Bbz96bYxbSmwj%2Fe%2F1uVBsqAwMYbMjzOluqJfLv0mGGrxSihvGG3CtSffz6QEUPYBZh6phjDZPLqeqHn%2B30eVyAv4A6TrIusIX3VXtHR7%2B0lStge0a9SDESUByKG9%2FPE1M%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 76a1bb186e67e23d-ORD
+      - 76a1bfb41ce32a45-ORD
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: UTF-8
-      string: '{"type":"FeatureCollection","features":[]}'
-  recorded_at: Mon, 14 Nov 2022 18:15:09 GMT
+      string: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"street":"Loka
+        ceļš","city":"Allažu pagasts","county":"Siguldas novads","state":"Vidzeme","country":"Latvia","country_code":"lv","lon":24.740515142398415,"lat":57.0036019931534,"formatted":"Loka
+        ceļš, Allažu pagasts, Latvia","address_line1":"Loka ceļš","address_line2":"Allažu
+        pagasts, Latvia","mappedTo":{"lon":24.740515142398415,"lat":57.0036019931534},"name":"Inčukalna
+        Allažu meža dzelzceļš","categories":["tourism","tourism.sights"],"details":["details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Inčukalna
+        Allažu meža dzelzceļš","gauge":600,"route":"historic","osm_id":-13103508,"historic":"railway","osm_type":"r","wikidata":"Q108037515","wikipedia":"lv:Dzelzceļa
+        līnija Inčukalns—Allaži"}},"place_id":"51ffbc95cbaebd3840596b9d1d49f1804c40f00101f90194f1c70000000000920324496ec48d756b616c6e6120416c6c61c5be75206d65c5be6120647a656c7a6365c4bcc5a1"},"geometry":{"type":"Point","coordinates":[24.74094841390342,57.00736345239678]}},{"type":"Feature","properties":{"name":"Suntažu
+        muižas pils","street":"Inciems — Sigulda — Ķegums","suburb":"Dārziņi","village":"Suntaži","city":"Suntažu
+        pagasts","county":"Ogres novads","state":"Zemgale","postcode":"LV-5060","country":"Latvia","country_code":"lv","lon":24.925342852238714,"lat":56.9072853,"formatted":"Suntaži
+        Manor, Inciems — Sigulda — Ķegums, Suntažu pagasts, LV-5060, Latvia","address_line1":"Suntaži
+        Manor","address_line2":"Inciems — Sigulda — Ķegums, Suntažu pagasts, LV-5060,
+        Latvia","categories":["building","building.historic","tourism","tourism.sights"],"details":["details","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Suntažu
+        muižas pils","osm_id":203903707,"name:en":"Suntaži Manor","building":"yes","historic":"manor","osm_type":"w","wikidata":"Q7641681","wikipedia":"en:Suntaži
+        Manor"}},"place_id":"51091bbd45e3ec38405930ab1bed21744c40f00102f901db52270c0000000092031553756e7461c5be75206d7569c5be61732070696c73"},"geometry":{"type":"Point","coordinates":[24.925342901867257,56.90728534556399]}},{"type":"Feature","properties":{"name":"Kastrānes
+        pilskalns","street":"Rīga — Ērgļi","suburb":"Brūleni","village":"Vatrāne","city":"Suntažu
+        pagasts","county":"Ogres novads","state":"Zemgale","postcode":"LV-5060","country":"Latvia","country_code":"lv","lon":24.9609144,"lat":56.9201283,"formatted":"Kastrānes
+        pilskalns, Rīga — Ērgļi, Suntažu pagasts, LV-5060, Latvia","address_line1":"Kastrānes
+        pilskalns","address_line2":"Rīga — Ērgļi, Suntažu pagasts, LV-5060, Latvia","categories":["tourism","tourism.sights","tourism.sights.archaeological_site"],"details":["details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Kastrānes
+        pilskalns","osm_id":6431534540,"historic":"archaeological_site","osm_type":"n","wikidata":"Q23900670","site_type":"fortification","fortification_type":"hill_fort"}},"place_id":"516541727cfef5384059aac79ec3c6754c40f00103f901cc6d597f010000009203144b61737472c4816e65732070696c736b616c6e73"},"geometry":{"type":"Point","coordinates":[24.960914399999997,56.92012830021788]}},{"type":"Feature","properties":{"name":"Zaubes
+        pils drupas","street":"Mālpils — Zaube — Kliģene","suburb":"Kooperatīvs","village":"Zaube","city":"Zaubes
+        pagasts","county":"Cēsu novads","state":"Vidzeme","country":"Latvia","country_code":"lv","lon":25.2614711,"lat":56.9948842,"formatted":"Zaubes
+        pils drupas, Mālpils — Zaube — Kliģene, Zaubes pagasts, Latvia","address_line1":"Zaubes
+        pils drupas","address_line2":"Mālpils — Zaube — Kliģene, Zaubes pagasts, Latvia","categories":["tourism","tourism.sights","tourism.sights.archaeological_site"],"details":["details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Zaubes
+        pils drupas","osm_id":7316855275,"historic":"archaeological_site","osm_type":"n","wikidata":"Q18623455","historic:civilization":"medieval"}},"place_id":"5163591fc5ef42394059c2b38f5d587f4c40f00103f901eb591eb4010000009203125a61756265732070696c7320647275706173"},"geometry":{"type":"Point","coordinates":[25.261471100000005,56.99488420025547]}},{"type":"Feature","properties":{"name":"Братское
+        кладбище советских войнов (1944)","street":"Mālpils — Zaube — Kliģene","suburb":"Caunītes","village":"Zaube","city":"Zaubes
+        pagasts","county":"Cēsu novads","state":"Vidzeme","country":"Latvia","country_code":"lv","lon":25.2771252,"lat":56.9990907,"formatted":"Fraternal
+        Cemetery of Soviet soldiers (1944), Mālpils — Zaube — Kliģene, Zaubes pagasts,
+        Latvia","address_line1":"Fraternal Cemetery of Soviet soldiers (1944)","address_line2":"Mālpils
+        — Zaube — Kliģene, Zaubes pagasts, Latvia","categories":["tourism","tourism.sights","tourism.sights.memorial"],"details":["details","details.historic"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Братское
+        кладбище советских войнов (1944)","osm_id":8362747431,"name:en":"Fraternal
+        Cemetery of Soviet soldiers (1944)","name:lv":"Padomju karavīru kapi (1944)","website":"http://www.nashapobeda.lv/3172.html","historic":"memorial","material":"stone","memorial":"war_memorial","osm_type":"n","inscription":"«ВЕЧНАЯ
+        СЛАВА ПАВШИМ ГЕРОЯМ»"}},"place_id":"51bfe556adf14639405910ac3d34e27f4c40f00103f901276675f201000000920348d091d180d0b0d182d181d0bad0bed0b520d0bad0bbd0b0d0b4d0b1d0b8d189d0b520d181d0bed0b2d0b5d182d181d0bad0b8d18520d0b2d0bed0b9d0bdd0bed0b220283139343429"},"geometry":{"type":"Point","coordinates":[25.277125199999997,56.999090700257625]}},{"type":"Feature","properties":{"name":"Mālpils
+        muiža","street":"Muzeja iela","suburb":"Zarumi","district":"Mālpils","city":"Mālpils
+        pagasts","county":"Siguldas novads","state":"Vidzeme","postcode":"LV-2152","country":"Latvia","country_code":"lv","lon":24.949421385732467,"lat":57.0064191,"formatted":"Mālpils
+        muiža, Muzeja iela, Mālpils pagasts, LV-2152, Latvia","address_line1":"Mālpils
+        muiža","address_line2":"Muzeja iela, Mālpils pagasts, LV-2152, Latvia","categories":["accommodation","accommodation.hotel","building","building.accommodation","building.historic","tourism","tourism.sights"],"details":[],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Mālpils
+        muiža","osm_id":111713150,"tourism":"hotel","building":"yes","historic":"manor","osm_type":"w"}},"place_id":"5162f1a6d20ff33840598d97a871d1804c40f00102f9017e9ba8060000000092030f4dc4816c70696c73206d7569c5be61"},"geometry":{"type":"Point","coordinates":[24.949460187680764,57.00639172298461]}},{"type":"Feature","properties":{"name":"Buku
+        Muiža","street":"V71","suburb":"Stirnas","city":"Mālpils pagasts","county":"Siguldas
+        novads","state":"Vidzeme","postcode":"LV-2152","country":"Latvia","country_code":"lv","lon":24.941405000000003,"lat":57.03488825,"formatted":"Buku
+        Muiža, V71, Mālpils pagasts, LV-2152, Latvia","address_line1":"Buku Muiža","address_line2":"V71,
+        Mālpils pagasts, LV-2152, Latvia","categories":["building","building.historic","tourism","tourism.sights"],"details":[],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Buku
+        Muiža","osm_id":111713175,"building":"yes","historic":"manor","osm_type":"w"}},"place_id":"51764a07ebfff038405977f9da3777844c40f00102f901979ba8060000000092030b42756b75204d7569c5be61"},"geometry":{"type":"Point","coordinates":[24.941404999999996,57.034888250275735]}},{"type":"Feature","properties":{"name":"Nītaures
+        pils / Nītaures vidusskola","street":"Garkalne — Alauksts","suburb":"Lāsītes","village":"Nītaure","city":"Nītaures
+        pagasts","county":"Cēsu novads","state":"Vidzeme","country":"Latvia","country_code":"lv","lon":25.186362824218698,"lat":57.0684696,"formatted":"Nītaures
+        pils / Nītaures vidusskola, Garkalne — Alauksts, Nītaures pagasts, Latvia","address_line1":"Nītaures
+        pils / Nītaures vidusskola","address_line2":"Garkalne — Alauksts, Nītaures
+        pagasts, Latvia","categories":["building","building.historic","building.school","education","education.school","tourism","tourism.sights","tourism.sights.castle"],"details":["details.building"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Nītaures
+        pils / Nītaures vidusskola","osm_id":116883938,"amenity":"school","building":"yes","historic":"castle","osm_type":"w","building:levels":3}},"place_id":"512031457cb12f394059f9687142c6884c40f00102f901e281f706000000009203254ec4ab7461757265732070696c73202f204ec4ab746175726573207669647573736b6f6c61"},"geometry":{"type":"Point","coordinates":[25.186301962750008,57.06855040109253]}},{"type":"Feature","properties":{"name":"Zaubes
+        pareizticīgo baznīca","street":"Mālpils — Zaube — Kliģene","suburb":"Caunītes","village":"Zaube","city":"Zaubes
+        pagasts","county":"Cēsu novads","state":"Vidzeme","country":"Latvia","country_code":"lv","lon":25.27117015,"lat":56.99347405,"formatted":"Zaubes
+        pareizticīgo baznīca, Mālpils — Zaube — Kliģene, Zaubes pagasts, Latvia","address_line1":"Zaubes
+        pareizticīgo baznīca","address_line2":"Mālpils — Zaube — Kliģene, Zaubes pagasts,
+        Latvia","categories":["building","building.historic","building.place_of_worship","tourism","tourism.sights","tourism.sights.place_of_worship","tourism.sights.ruines"],"details":["details.place_of_worship"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Zaubes
+        pareizticīgo baznīca","osm_id":448145352,"amenity":"place_of_worship","building":"yes","historic":"ruins","osm_type":"w","religion":"christian","denomination":"orthodox"}},"place_id":"51c2e62d686b453940596fa25d282a7f4c40f00102f901c827b61a0000000092031d5a61756265732070617265697a746963c4ab676f2062617a6ec4ab6361"},"geometry":{"type":"Point","coordinates":[25.271170149999996,56.9934740502548]}},{"type":"Feature","properties":{"name":"Madlienas
+        Lielā Muiža","street":"Madliena — Lēdmane","suburb":"Gaitiņi","village":"Madliena","city":"Madlienas
+        pagasts","county":"Ogres novads","state":"Zemgale","postcode":"LV-5045","country":"Latvia","country_code":"lv","lon":25.12972280667538,"lat":56.835455499999995,"formatted":"Madlienas
+        Lielā Muiža, Madliena — Lēdmane, Madlienas pagasts, LV-5045, Latvia","address_line1":"Madlienas
+        Lielā Muiža","address_line2":"Madliena — Lēdmane, Madlienas pagasts, LV-5045,
+        Latvia","categories":["building","building.historic","tourism","tourism.sights"],"details":[],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Madlienas
+        Lielā Muiža","osm_id":525231383,"building":"yes","historic":"manor","osm_type":"w"}},"place_id":"51997fe721342139405987125aadee6a4c40f00102f90117654e1f000000009203174d61646c69656e6173204c69656cc481204d7569c5be61"},"geometry":{"type":"Point","coordinates":[25.129701727884456,56.83540884874406]}},{"type":"Feature","properties":{"name":"Velna
+        torņa pamati","street":"Torņkalna iela","suburb":"Vibroka","isolated_dwelling":"Dravantas","district":"Mālpils","city":"Mālpils
+        pagasts","county":"Siguldas novads","state":"Vidzeme","postcode":"LV-2152","country":"Latvia","country_code":"lv","lon":24.936978296313868,"lat":57.016247750000005,"formatted":"Velna
+        torņa pamati, Torņkalna iela, Mālpils pagasts, LV-2152, Latvia","address_line1":"Velna
+        torņa pamati","address_line2":"Torņkalna iela, Mālpils pagasts, LV-2152, Latvia","categories":["tourism","tourism.sights","tourism.sights.ruines"],"details":[],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"area":"yes","name":"Velna
+        torņa pamati","osm_id":917619624,"historic":"ruins","osm_type":"w"}},"place_id":"51a5f5c1cbddef384059b12bbb6014824c40f00102f901a8c3b1360000000092031356656c6e6120746f72c586612070616d617469"},"geometry":{"type":"Point","coordinates":[24.93697808728543,57.01624688281243]}},{"type":"Feature","properties":{"name":"Zviedru
+        baznīca","street":"Sigulda — Allaži — Ausmas","suburb":"Lantes","village":"Allaži","city":"Allažu
+        pagasts","county":"Siguldas novads","state":"Vidzeme","country":"Latvia","country_code":"lv","lon":24.81838162344308,"lat":57.030606250000005,"formatted":"Zviedru
+        baznīca, Sigulda — Allaži — Ausmas, Allažu pagasts, Latvia","address_line1":"Zviedru
+        baznīca","address_line2":"Sigulda — Allaži — Ausmas, Allažu pagasts, Latvia","categories":["building","building.historic","tourism","tourism.sights","tourism.sights.ruines"],"details":["details.building","details.historic"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Zviedru
+        baznīca","ruins":"church","osm_id":985980213,"building":"ruins","historic":"ruins","osm_type":"w","start_date":"~C17"}},"place_id":"5154756f6781d1384059c54f7ed9ea834c40f00102f90135ddc43a000000009203105a7669656472752062617a6ec4ab6361"},"geometry":{"type":"Point","coordinates":[24.818380799018385,57.030604540515505]}},{"type":"Feature","properties":{"name":"Rūdolfs
+        Blaumanis","street":"Dārza iela","suburb":"Ķipari","city":"Sigulda","county":"Siguldas
+        novads","state":"Vidzeme","country":"Latvia","country_code":"lv","lon":24.8585961,"lat":57.155089,"formatted":"Rūdolfs
+        Blaumanis, Dārza iela, Sigulda, Latvia","address_line1":"Rūdolfs Blaumanis","address_line2":"Dārza
+        iela, Sigulda, Latvia","categories":["tourism","tourism.sights","tourism.sights.memorial"],"details":[],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Rūdolfs
+        Blaumanis","osm_id":1378715546,"historic":"memorial","osm_type":"n"}},"place_id":"511ff939f4ccdb3840595835d4f4d9934c40f00103f9019a872d520000000092031252c5ab646f6c667320426c61756d616e6973"},"geometry":{"type":"Point","coordinates":[24.858596099999996,57.155089000337]}},{"type":"Feature","properties":{"name":"Latviešu
+        leģiona karavīriem Mores kauja 1944.g 25.-29. septembris","street":"Siguldas
+        iela","district":"More","city":"Mores pagasts","county":"Siguldas novads","state":"Vidzeme","postcode":"LV-2170","country":"Latvia","country_code":"lv","lon":25.0889279,"lat":57.0818119,"formatted":"Latviešu
+        leģiona karavīriem Mores kauja 1944.g 25.-29. septembris, Siguldas iela, Mores
+        pagasts, LV-2170, Latvia","address_line1":"Latviešu leģiona karavīriem Mores
+        kauja 1944.g 25.-29. septembris","address_line2":"Siguldas iela, Mores pagasts,
+        LV-2170, Latvia","categories":["tourism","tourism.sights","tourism.sights.memorial"],"details":[],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Latviešu
+        leģiona karavīriem Mores kauja 1944.g 25.-29. septembris","osm_id":1445777784,"historic":"memorial","osm_type":"n"}},"place_id":"51b33396fac316394059ea1af6cf788a4c40f00103f90178d12c56000000009203444c6174766965c5a175206c65c4a3696f6e61206b61726176c4ab7269656d204d6f726573206b61756a6120313934342e672032352e2d32392e2073657074656d62726973"},"geometry":{"type":"Point","coordinates":[25.088927899999998,57.08181190029957]}},{"type":"Feature","properties":{"name":"Ehrenfriedhof
+        Kronenberg","street":"Pievedceļš Lorupes gravai","suburb":"Kaķīši","city":"Sigulda","county":"Siguldas
+        novads","state":"Vidzeme","country":"Latvia","country_code":"lv","lon":24.821019,"lat":57.1387244,"formatted":"Ehrenfriedhof
+        Kronenberg, Pievedceļš Lorupes gravai, Sigulda, Latvia","address_line1":"Ehrenfriedhof
+        Kronenberg","address_line2":"Pievedceļš Lorupes gravai, Sigulda, Latvia","categories":["tourism","tourism.sights","tourism.sights.memorial"],"details":["details.historic"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Ehrenfriedhof
+        Kronenberg","osm_id":1938230092,"historic":"memorial","memorial":"graveyard","osm_type":"n"}},"place_id":"5106651a4d2ed2384059c9489db8c1914c40f00103f9014c0b877300000000920318456872656e6672696564686f66204b726f6e656e62657267"},"geometry":{"type":"Point","coordinates":[24.821019,57.13872440032862]}},{"type":"Feature","properties":{"name":"Skulptūru
+        dārzs","street":"Garkalnes iela","suburb":"Krievkalns","district":"Mālpils","city":"Mālpils
+        pagasts","county":"Siguldas novads","state":"Vidzeme","postcode":"LV-2152","country":"Latvia","country_code":"lv","lon":24.9439378,"lat":57.0112033,"formatted":"Skulptūru
+        dārzs, Garkalnes iela, Mālpils pagasts, LV-2152, Latvia","address_line1":"Skulptūru
+        dārzs","address_line2":"Garkalnes iela, Mālpils pagasts, LV-2152, Latvia","categories":["tourism","tourism.sights","tourism.sights.memorial","tourism.sights.memorial.monument"],"details":[],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Skulptūru
+        dārzs","osm_id":2023981770,"historic":"monument","osm_type":"n"}},"place_id":"514c755ce8a5f1384059b81e181c6f814c40f00103f901ca82a37800000000920311536b756c7074c5ab72752064c481727a73"},"geometry":{"type":"Point","coordinates":[24.9439378,57.01120330026373]}},{"type":"Feature","properties":{"name":"Piemiņas
+        zīme \"Purva velnam\"","street":"Inciems — Sigulda — Ķegums","suburb":"Ummuri","village":"Jūdaži","city":"Siguldas
+        pagasts","county":"Siguldas novads","state":"Vidzeme","country":"Latvia","country_code":"lv","lon":24.8958199,"lat":57.132195,"formatted":"Piemiņas
+        zīme \"Purva velnam\", Inciems — Sigulda — Ķegums, Siguldas pagasts, Latvia","address_line1":"Piemiņas
+        zīme \"Purva velnam\"","address_line2":"Inciems — Sigulda — Ķegums, Siguldas
+        pagasts, Latvia","categories":["tourism","tourism.sights","tourism.sights.memorial"],"details":["details.historic"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Piemiņas
+        zīme \"Purva velnam\"","osm_id":2266854514,"historic":"memorial","memorial":"stone","osm_type":"n","inscription":"Piemiņas
+        zīme \"Purva velns\" uzstādīta 1974.6.IX atzīmējot ZPS \"Sigulda\" zemju nosusināšanas
+        pabeigšanu ..."}},"place_id":"51219bf57354e5384059c18b09c4eb904c40f00103f90172741d870000000092031e5069656d69c5866173207ac4ab6d65202250757276612076656c6e616d22"},"geometry":{"type":"Point","coordinates":[24.895819899999996,57.13219500032529]}},{"type":"Feature","properties":{"name":"Nītaures
+        pilskalns","street":"Līgatnes papīrfabrika - Asaru ezers - Nītaure","suburb":"Elkšņi","village":"Nītaure","city":"Nītaures
+        pagasts","county":"Cēsu novads","state":"Vidzeme","country":"Latvia","country_code":"lv","lon":25.1967241,"lat":57.0740587,"formatted":"Nītaures
+        pilskalns, Līgatnes papīrfabrika - Asaru ezers - Nītaure, Nītaures pagasts,
+        Latvia","address_line1":"Nītaures pilskalns","address_line2":"Līgatnes papīrfabrika
+        - Asaru ezers - Nītaure, Nītaures pagasts, Latvia","categories":["tourism","tourism.sights","tourism.sights.archaeological_site"],"details":[],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Nītaures
+        pilskalns","osm_id":2300548805,"historic":"archaeological_site","osm_type":"n"}},"place_id":"51c5d5b7825c3239405982e067c17a894c40f00103f901c5961f89000000009203134ec4ab7461757265732070696c736b616c6e73"},"geometry":{"type":"Point","coordinates":[25.1967241,57.07405870029562]}},{"type":"Feature","properties":{"name":"Piemineklis
+        izsūtītajiem","street":"Krodzinieki – Laubere","village":"Laubere","city":"Lauberes
+        pagasts","county":"Ogres novads","state":"Zemgale","postcode":"LV-5044","country":"Latvia","country_code":"lv","lon":25.0208814,"lat":56.8583157,"formatted":"Piemineklis
+        izsūtītajiem, Krodzinieki – Laubere, Lauberes pagasts, LV-5044, Latvia","address_line1":"Piemineklis
+        izsūtītajiem","address_line2":"Krodzinieki – Laubere, Lauberes pagasts, LV-5044,
+        Latvia","categories":["tourism","tourism.sights","tourism.sights.memorial"],"details":[],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Piemineklis
+        izsūtītajiem","osm_id":4307276152,"historic":"memorial","osm_type":"n"}},"place_id":"513d18c27b58053940592af9f249dd6d4c40f00103f90178d1bb000100000092031a5069656d696e656b6c697320697a73c5ab74c4ab74616a69656d"},"geometry":{"type":"Point","coordinates":[25.020881399999997,56.85831570018702]}},{"type":"Feature","properties":{"name":"Ķoderu
+        pilskalns","street":"Rīga — Ērgļi","suburb":"Lielkangari","village":"Jugla","city":"Suntažu
+        pagasts","county":"Ogres novads","state":"Zemgale","country":"Latvia","country_code":"lv","lon":24.7704702,"lat":56.9076204,"formatted":"Ķoderu
+        pilskalns, Rīga — Ērgļi, Suntažu pagasts, Latvia","address_line1":"Ķoderu
+        pilskalns","address_line2":"Rīga — Ērgļi, Suntažu pagasts, Latvia","categories":["tourism","tourism.sights","tourism.sights.archaeological_site"],"details":["details","details.historic"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Ķoderu
+        pilskalns","osm_id":4307276679,"alt_name":"Lielā vīra gulta","historic":"archaeological_site","osm_type":"n","site_type":"fortification","fortification_type":"hill_fort"}},"place_id":"51e58af7883dc5384059b30bc0e72c744c40f00103f90187d3bb0001000000920311c4b66f646572752070696c736b616c6e73"},"geometry":{"type":"Point","coordinates":[24.770470199999995,56.907620400211634]}}]}'
+  recorded_at: Mon, 14 Nov 2022 18:18:18 GMT
 recorded_with: VCR 6.1.0
