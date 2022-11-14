@@ -53,8 +53,7 @@ RSpec.describe 'The favorite request' do
         favorite = user.favorites.create!(country: "egypt",  recipe_title: "Recipe: Egyptian Tomato Soup", recipe_link: "http://www.thekitchn.com/recipe-egyptian-tomato-soup-weeknight....")
         
         headers = {'CONTENT_TYPE' => 'application/json'}
-        body = {
-          api_key: "jgn983hy48thw9begh98h4539h4"}
+        body = {api_key: "jgn983hy48thw9begh98h4539h4"}
 
         get '/api/v1/favorites', headers: headers, params: body
 
@@ -94,8 +93,7 @@ RSpec.describe 'The favorite request' do
     describe 'When the api key does not match any user' do
       it 'returns a status 404 and error message' do
         headers = {'CONTENT_TYPE' => 'application/json'}
-        body = JSON.generate(
-          api_key: "jgn983hy48thw9begh98h4539h4")
+        body = JSON.generate(api_key: "jgn983hy48thw9begh98h4539h4")
 
         get '/api/v1/favorites', headers: headers, params: JSON.parse(body)
 
@@ -105,4 +103,21 @@ RSpec.describe 'The favorite request' do
       end
     end
   end
+
+  describe 'DELETE api/v1/favorites' do
+    it 'removes a favorite from the database' do
+      user = User.create!(name: "Tina", email: "linagirl@yahoo.com", api_key: 'jgn983hy48thw9begh98h4539h4')
+      favorite = user.favorites.create!(country: "thailand",  recipe_title: "Crab Fried Rice (Khaao Pad Bpu)", recipe_link: "https://www.tastingtable.com")
+
+      headers = {'CONTENT_TYPE' => 'application/json'}
+      body = JSON.generate(api_key: "jgn983hy48thw9begh98h4539h4", favorite_id: favorite.id)
+
+      delete '/api/v1/favorites', headers: headers, params: body
+
+      expect(response).to be_successful
+      expect(response).to have_http_status(204)
+      expect(Favorite.all).to_not include(favorite)
+    end
+  end
+
 end

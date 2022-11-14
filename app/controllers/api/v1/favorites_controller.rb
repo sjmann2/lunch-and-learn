@@ -17,6 +17,10 @@ class Api::V1::FavoritesController < ApplicationController
     end
   end
 
+  def destroy
+    @user.favorites.find(params[:favorite_id]).destroy
+  end
+
   private
   
   def set_user
