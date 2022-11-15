@@ -28,14 +28,14 @@ rails s
 # Database Schema Diagram
 ![lunch-and-learn db](https://user-images.githubusercontent.com/99758586/201795623-337ddea2-568f-42c0-a20d-6da1786aec13.png)
 
-# Endpoint Available
+# Endpoints Available
 ## Base URL
 http://localhost:3000/api/v1
 
 ## Get recipes for a random country
 GET `/recipes`
 ### Example response
-```
+```JSON
 {
     "data": [
         {
@@ -64,7 +64,7 @@ GET `/recipes`
 ## Get recipes for a specified country
 GET `/recipes?country=thailand`
 ### Example response
-```
+```JSON
 {
     "data": [
         {
@@ -93,7 +93,7 @@ GET `/recipes?country=thailand`
 ## Get learning resources for a specified country
 GET `/learning_resources?country=thailand`
 ### Example response
-```
+```JSON
 {
     "data": {
         "id": null,
@@ -129,15 +129,15 @@ GET `/learning_resources?country=thailand`
 }
 ```
 ## Post user registration
-POST `/users` with a body containing user name and email
-```
+POST `/users` passing in a body containing user name and email
+```JSON
 {
   "name": "Jim Beans",
   "email": "jimmybean@yahoo.com"
 }
 ```
 ### Example response
-```
+```JSON
 {
   "data": {
     "type": "user",
@@ -151,8 +151,8 @@ POST `/users` with a body containing user name and email
 }
 ```
 ## Post favorite recipes for a user
-POST `/favorites` with a body containing api key specific to that user, country, recipe link and recipe name
-```
+POST `/favorites` passing in a body containing api key specific to the user, country, recipe link and recipe name
+```JSON
 {
     "api_key": "jgn983hy48thw9begh98h4539h4",
     "country": "thailand",
@@ -161,20 +161,20 @@ POST `/favorites` with a body containing api key specific to that user, country,
 }
 ```
 ### Example response
-```
+```JSON
 {
     "success": "Favorite added successfully"
 }
 ```
 ## Get a user's favorites
-GET `/favorites` with a body containing api key specific to that user
-```
+GET `/favorites` passing in a body containing api key specific to the user
+```JSON
 {
     "api_key": "jgn983hy48thw9begh98h4539h4"
 }
 ```
 ### Example response
-```
+```JSON
 {
     "data": [
         {
@@ -201,8 +201,8 @@ GET `/favorites` with a body containing api key specific to that user
  }    
  ```
  ## Delete a user's favorite
-DELETE `/favorites` with a body containing api key specific to that user and the recipe id
-```
+DELETE `/favorites` passing in a body containing api key specific to the user and the favorite id
+```JSON
 {
     "api_key": "jgn983hy48thw9begh98h4539h4",
     "favorite_id": 2
