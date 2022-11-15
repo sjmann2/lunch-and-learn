@@ -11,4 +11,10 @@ RSpec.describe PhotoService do
     expect(photos[:alt_description]).to be_a(String)
     expect(photos[:urls][:raw]).to be_a(String)
   end
+
+  it 'returns an HTTP response of empty photos if keyword does not match any images', :vcr do
+    response = PhotoService.get_photos('fjkdljkfldskjdsf')
+
+    expect(response[:results]).to be_empty
+  end
 end

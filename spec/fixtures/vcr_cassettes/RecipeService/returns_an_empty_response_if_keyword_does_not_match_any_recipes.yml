@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.edamam.com/search?app_id=<edmam_app_id>&app_key=<edmam_api_key>&count=10&q=
+    uri: https://api.edamam.com/search?app_id=<edmam_app_id>&app_key=<edmam_api_key>&count=10&q=fjdklafdksalj
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Tue, 15 Nov 2022 22:37:56 GMT
+      - Tue, 15 Nov 2022 22:43:52 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -33,15 +33,15 @@ http_interactions:
       Expires:
       - Thu, 01 Jan 1970 00:00:00 GMT
       X-Served-By:
-      - ip-10-0-1-10.ec2.internal/10.0.1.10
+      - ip-10-0-1-87.ec2.internal/10.0.1.87
       Vary:
       - accept-encoding
       Strict-Transport-Security:
       - max-age=15552001
       X-Request-Id:
-      - c6f3ff2eede47d7a826630b84f081d06
+      - 8acf8f9660188708be32de321d8ac98f
     body:
       encoding: UTF-8
-      string: '{"q":"","from":0,"to":10,"more":false,"count":0,"hits":[]}'
-  recorded_at: Tue, 15 Nov 2022 22:37:55 GMT
+      string: '{"q":"fjdklafdksalj","from":0,"to":10,"more":false,"count":0,"hits":[]}'
+  recorded_at: Tue, 15 Nov 2022 22:43:51 GMT
 recorded_with: VCR 6.1.0

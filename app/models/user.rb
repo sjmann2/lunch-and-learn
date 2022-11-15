@@ -1,7 +1,9 @@
 class User < ApplicationRecord
   has_many :favorites
-  validates_presence_of :name, :email
+  validates_presence_of :name, :email, :password, :password_confirmation
   validates_uniqueness_of :email, :api_key
+  
+  has_secure_password
   
   before_validation :set_api_key, if: :api_key_nil?
 

@@ -13,4 +13,10 @@ RSpec.describe RecipeService do
     expect(recipe[:recipe][:label]).to be_a(String)
     expect(recipe[:recipe][:image]).to be_a(String)
   end
+
+  it 'returns an empty response if keyword does not match any recipes', :vcr do
+    response = RecipeService.get_recipes('fjdklafdksalj')
+
+    expect(response[:hits]).to be_empty
+  end
 end
