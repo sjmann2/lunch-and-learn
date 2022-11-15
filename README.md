@@ -129,11 +129,13 @@ GET `/learning_resources?country=thailand`
 }
 ```
 ## Post user registration
-POST `/users` passing in a body containing user name and email
+POST `/users` passing in a body containing user name, email, password, password confirmation
 ```JSON
 {
   "name": "Jim Beans",
-  "email": "jimmybean@yahoo.com"
+  "email": "jimmybean@yahoo.com",
+  "password": "password",
+  "password_confirmation": "password"
 }
 ```
 ### Example response
@@ -143,7 +145,29 @@ POST `/users` passing in a body containing user name and email
     "type": "user",
     "id": "1",
     "attributes": {
-      "name": "Jimmy Beans",
+      "name": "Jim Beans",
+      "email": "jimmybean@yahoo.com",
+      "api_key": "jgn983hy48thw9begh98h4539h4"
+    }
+  }
+}
+```
+## Post user login
+POST `/users` passing in a body containing user name and email
+```JSON
+{
+  "name": "Jim Beans",
+  "email": "jimmybean@yahoo.com"
+}
+```
+### Example Response
+```JSON
+{
+  "data": {
+    "type": "user",
+    "id": "1",
+    "attributes": {
+      "name": "Jim Beans",
       "email": "jimmybean@yahoo.com",
       "api_key": "jgn983hy48thw9begh98h4539h4"
     }
