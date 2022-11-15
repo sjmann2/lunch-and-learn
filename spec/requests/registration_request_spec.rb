@@ -5,7 +5,7 @@ RSpec.describe 'The user registration request' do
     describe 'when all params are present' do
       it 'creates a new user and generates a unique api key for them' do
         headers = {"CONTENT_TYPE" => "application/json"}
-        body = JSON.generate(name: "Athena Dao", email: "athenadao@bestgirlever.com")
+        body = JSON.generate(name: "Athena Dao", email: "athenadao@bestgirlever.com", password: "treats4lyf", password_confirmation: "treats4lyf")
         
         post '/api/v1/users', headers: headers, params: body
 
@@ -39,23 +39,36 @@ RSpec.describe 'The user registration request' do
         expect(result[:errors].first).to have_key(:status)
         expect(result[:errors].first).to have_key(:message)
         expect(result[:errors].first).to have_key(:code)
+        expect(result[:errors][0][:message]).to eq(["Email can't be blank", "Password can't be blank", "Password confirmation can't be blank"])
       end
     end
 
     describe 'if an email address is not unique' do
       it 'returns an error message' do
         headers = {"CONTENT_TYPE" => "application/json"}
-        body = JSON.generate(name: "Jim Beans", email: "jim@beans.com")
+        body = JSON.generate(name: "Jim Beans", email: "jim@beans.com", password: "beans", password_confirmation: "beans")
         post '/api/v1/users', headers: headers, params: body
         expect(response).to have_http_status(201)
 
-        body = JSON.generate(name: "Jimmy Beans", email: "jim@beans.com")
+        body = JSON.generate(name: "Jimmy Beans", email: "jim@beans.com", password: "beans", password_confirmation: "beans")
         post '/api/v1/users', headers: headers, params: body
 
         expect(response).to have_http_status(400)
         result = JSON.parse(response.body, symbolize_names: true)
 
         expect(result[:errors].first[:message]).to eq(["Email has already been taken"])
+      end
+    end
+
+    describe 'if a password does not match the password confirmation' do
+      it 'returns an error message' do
+        headers = {"CONTENT_TYPE" => "application/json"}
+        body = JSON.generate(name: "Jim Beans", email: "jim@beans.com", password: "beans", password_confirmation: "beanz")
+        post '/api/v1/users', headers: headers, params: body
+        expect(response).to have_http_status(400)
+        result = JSON.parse(response.body, symbolize_names: true)
+
+        expect(result[:errors].first[:message]).to eq(["Password confirmation doesn't match Password"])
       end
     end
   end
