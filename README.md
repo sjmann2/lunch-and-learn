@@ -33,7 +33,7 @@ rails s
 http://localhost:3000/api/v1
 
 ## Get recipes for a random country
-GET `/recipes/country`
+GET `/recipes`
 ### Example response
 ```
 {
@@ -60,3 +60,151 @@ GET `/recipes/country`
         }
     ]
 }    
+```
+## Get recipes for a specified country
+GET `/recipes?country=thailand`
+### Example response
+```
+{
+    "data": [
+        {
+            "id": null,
+            "type": "recipe",
+            "attributes": {
+                "title": "Andy Ricker's Naam Cheuam Naam Taan Piip (Palm Sugar Simple Syrup)",
+                "url": "https://www.seriouseats.com/recipes/2013/11/andy-rickers-naam-cheuam-naam-taan-piip-palm-sugar-simple-syrup.html",
+                "country": "thailand",
+                "image": "https://edamam-product-images.s3.amazonaws.com..."
+            }
+        },
+        {
+            "id": null,
+            "type": "recipe",
+            "attributes": {
+                "title": "THAI COCONUT CREMES",
+                "url": "https://food52.com/recipes/37220-thai-coconut-cremes",
+                "country": "thailand",
+                "image": "https://edamam-product-images.s3.amazonaws.com..."
+            }
+        }
+    ]
+}   
+```
+## Get learning resources for a specified country
+GET `/learning_resources?country=thailand`
+### Example response
+```
+{
+    "data": {
+        "id": null,
+        "type": "learning_resource",
+        "attributes": {
+            "country": "thailand",
+            "video": {
+                "title": "THE HISTORY OF THAILAND in 10 minutes",
+                "youtube_video_id": "zo1e7XUWkME"
+            },
+            "images": [
+                {
+                    "alt_tag": "standing statue and temples landmark during daytime",
+                    "url": "https://images.unsplash.com/photo-1528181304800-259b08848526?ixid=MnwzNzk5ODB8MHwxfHNlYXJjaHwxfHx0aGFpbGFuZHxlbnwwfHx8fDE2Njg0NjA3Mjc&ixlib=rb-4.0.3"
+                },
+                {
+                    "alt_tag": "five brown wooden boats",
+                    "url": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixid=MnwzNzk5ODB8MHwxfHNlYXJjaHwyfHx0aGFpbGFuZHxlbnwwfHx8fDE2Njg0NjA3Mjc&ixlib=rb-4.0.3"
+                },
+                {
+                    "alt_tag": "orange temples during daytime",
+                    "url": "https://images.unsplash.com/photo-1563492065599-3520f775eeed?ixid=MnwzNzk5ODB8MHwxfHNlYXJjaHwzfHx0aGFpbGFuZHxlbnwwfHx8fDE2Njg0NjA3Mjc&ixlib=rb-4.0.3"
+                },
+                {
+                    "alt_tag": "aerial photography of body of water surrounded with mountains",
+                    "url": "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?ixid=MnwzNzk5ODB8MHwxfHNlYXJjaHw0fHx0aGFpbGFuZHxlbnwwfHx8fDE2Njg0NjA3Mjc&ixlib=rb-4.0.3"
+                },
+                {...},
+                {etc}
+            ]
+        }     
+    }
+}
+```
+## Post user registration
+POST `/users` with a body containing user name and email
+```
+{
+  "name": "Jim Beans",
+  "email": "jimmybean@yahoo.com"
+}
+```
+### Example response
+```
+{
+  "data": {
+    "type": "user",
+    "id": "1",
+    "attributes": {
+      "name": "Jimmy Beans",
+      "email": "jimmybean@yahoo.com",
+      "api_key": "jgn983hy48thw9begh98h4539h4"
+    }
+  }
+}
+```
+## Post favorite recipes for a user
+POST `/favorites` with a body containing api key specific to that user, country, recipe link and recipe name
+```
+{
+    "api_key": "jgn983hy48thw9begh98h4539h4",
+    "country": "thailand",
+    "recipe_link": "https://www.tastingtable.com/.....",
+    "recipe_title": "Crab Fried Rice (Khaao Pad Bpu)"
+}
+```
+### Example response
+```
+{
+    "success": "Favorite added successfully"
+}
+```
+## Get a user's favorites
+GET `/favorites` with a body containing api key specific to that user
+```
+{
+    "api_key": "jgn983hy48thw9begh98h4539h4"
+}
+```
+### Example response
+```
+{
+    "data": [
+        {
+            "id": "1",
+            "type": "favorite",
+            "attributes": {
+                "recipe_title": "Recipe: Egyptian Tomato Soup",
+                "recipe_link": "http://www.thekitchn.com/recipe-egyptian-tomato-soup-weeknight....",
+                "country": "egypt",
+                "created_at": "2022-11-02T02:17:54.111Z"
+            }
+        },
+        {
+            "id": "2",
+            "type": "favorite",
+            "attributes": {
+                "recipe_title": "Crab Fried Rice (Khaao Pad Bpu)",
+                "recipe_link": "https://www.tastingtable.com/.....",
+                "country": "thailand",
+                "created_at": "2022-11-07T03:44:08.917Z"
+            }
+        }
+    ]
+ }    
+ ```
+ ## Delete a user's favorite
+DELETE `/favorites` with a body containing api key specific to that user and the recipe id
+```
+{
+    "api_key": "jgn983hy48thw9begh98h4539h4",
+    "favorite_id": 2
+}
+```
