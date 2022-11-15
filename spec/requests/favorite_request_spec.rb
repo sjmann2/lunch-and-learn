@@ -106,5 +106,4 @@ RSpec.describe 'The favorite request' do
       expect(Favorite.all).to_not include(favorite)
     end
   end
-
 end
