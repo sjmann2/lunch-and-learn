@@ -5,7 +5,9 @@ class CountryService
 
   def self.get_countries
     Rails.cache.fetch("all-countries", expires_in: 1.month) do
-      response = conn.get("/v2/all")
+      response = conn.get("/v2/all") do |req|
+        req.params['fields'] = 'name'
+      end
       JSON.parse(response.body, symbolize_names: true)
     end
   end
