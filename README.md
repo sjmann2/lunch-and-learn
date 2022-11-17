@@ -12,6 +12,16 @@ This app consumes four external APIs and consolidates the data to be consumed by
 * PostgreSQL Database
 * [jsonapi-serializer](https://github.com/jsonapi-serializer/jsonapi-serializer) for API response serialization
 
+# Gems 
+   ![rspec](https://img.shields.io/gem/v/rspec-rails?label=rspec&style=flat-square)
+   ![shoulda](https://img.shields.io/gem/v/shoulda-matchers?label=shoulda-matchers&style=flat-square)
+   ![capybara](https://img.shields.io/gem/v/capybara?label=capybara&style=flat-square)
+   ![simplecov](https://img.shields.io/gem/v/simplecov?label=simplecov&style=flat-square)
+   ![VCR](https://img.shields.io/gem/v/vcr?label=VCR&style=flat-square)
+   ![webmock](https://img.shields.io/gem/v/webmock?label=webmock&style=flat-square)
+   ![figaro](https://img.shields.io/gem/v/figaro?color=blue&label=figaro)
+   ![faraday](https://img.shields.io/gem/v/faraday?color=blue&label=faraday)
+   
 # Local Setup Directions
 ```
 git clone git@github.com:sjmann2/lunch-and-learn.git
